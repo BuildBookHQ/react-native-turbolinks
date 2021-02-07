@@ -18,7 +18,7 @@ class NativeViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.view = nil
+        self.view = self.route.dismissable ? self.view : nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
